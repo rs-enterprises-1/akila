@@ -207,32 +207,6 @@ Key Engineering Achievements:
     ]
   },
   {
-    id: "metal-sculpture-fabrication",
-    title: "Musical Band Decorative Metal Sculpture",
-    category: "Manufacturing & Design",
-    status: "Completed",
-    shortDesc: "Fabricated decorative metal band sculpture using woodworking, arc welding, and metal forming techniques.",
-    fullDesc: `Designed and manufactured a multi-material decorative metal sculpture representing a musical ensemble featuring instruments such as a guitar and trumpet.
-    
-Key Engineering Achievements:
-• Combined three primary manufacturing processes: precision woodworking for structural base mounts, welding (arc/MIG) for metallic joining, and sheet metal forming for musical instrument aesthetics.
-• Performed hands-on metal cutting, surface finishing, joint alignment, and structural stability testing.`,
-    tags: ["Woodworking", "Welding", "Metal Forming", "Manufacturing", "Hands-on Fabrication"],
-    highlights: [
-      "Multi-Material Joining (Metal & Wood)",
-      "Arc Welding & Sheet Metal Forming",
-      "Dimensional & Structural Integrity",
-      "Artistic Engineering Execution"
-    ],
-    media: [
-      {
-        type: "image",
-        url: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450' viewBox='0 0 800 450' fill='%230f172a'><rect width='100%' height='100%' fill='%230b0f19'/><path d='M350,300 C350,200 450,200 450,300 Z' fill='none' stroke='%23f59e0b' stroke-width='4'/><line x1='400' y1='100' x2='400' y2='320' stroke='%2394a3b8' stroke-width='6'/><circle cx='400' cy='320' r='35' fill='%23f59e0b'/><text x='400' y='395' text-anchor='middle' fill='%2394a3b8' font-family='sans-serif' font-size='16'>Metal Fabrication &amp; Sculpture Assembly</text></svg>",
-        caption: "Fabricated Sculpture Representation"
-      }
-    ]
-  },
-  {
     id: "pipe-inspection-robot",
     title: "Adaptive Pipe Inspection Robot",
     category: "Robotics & Mechatronics",

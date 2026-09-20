@@ -1,0 +1,194 @@
+{
+  "scara-robot": [
+    {
+      "type": "image",
+      "url": "/images/Screenshot_20260828_143646_Gallery.jpg",
+      "caption": "Screenshot_20260828_143646_Gallery.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot_20260828_143754_Gallery.jpg",
+      "caption": "Screenshot_20260828_143754_Gallery.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot_20260828_143809_Gallery.jpg",
+      "caption": "Screenshot_20260828_143809_Gallery.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot_20260828_143833_Gallery.jpg",
+      "caption": "Screenshot_20260828_143833_Gallery.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot_20260828_143901_Gallery.jpg",
+      "caption": "Screenshot_20260828_143901_Gallery.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot_20260828_143908_Gallery.jpg",
+      "caption": "Screenshot_20260828_143908_Gallery.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot_20260828_143946_Gallery.jpg",
+      "caption": "Screenshot_20260828_143946_Gallery.jpg"
+    }
+  ],
+  "micromouse-robot": [
+    {
+      "type": "image",
+      "url": "/images/Screenshot_20260920_215000_Gallery%20-%20Copy.jpg",
+      "caption": "Screenshot_20260920_215000_Gallery - Copy.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot_20260920_215029_Gallery.jpg",
+      "caption": "Screenshot_20260920_215029_Gallery.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/CamScanner%2020-09-2026%2022.02_3%20-%20Copy.jpg",
+      "caption": "CamScanner 20-09-2026 22.02_3 - Copy.jpg"
+    }
+  ],
+  "metal-sculpture-fabrication": [
+    {
+      "type": "image",
+      "url": "/images/20250515_173950.jpg",
+      "caption": "20250515_173950.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/20250515_194626.jpg",
+      "caption": "20250515_194626.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/20250515_194632.jpg",
+      "caption": "20250515_194632.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/20250515_195032.jpg",
+      "caption": "20250515_195032.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/20250522_184940.jpg",
+      "caption": "20250522_184940.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/20250523_140747.jpg",
+      "caption": "20250523_140747.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/20250526_112756.jpg",
+      "caption": "20250526_112756.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot_20250525_093005_Gallery.jpg",
+      "caption": "Screenshot_20250525_093005_Gallery.jpg"
+    }
+  ],
+  "bicycle-accelerometer": [
+    {
+      "type": "image",
+      "url": "/images/20251205_194930.jpg",
+      "caption": "20251205_194930.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/20251206_003925.jpg",
+      "caption": "20251206_003925.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/20251206_092955.jpg",
+      "caption": "20251206_092955.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/20251206_110619.jpg",
+      "caption": "20251206_110619.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/20251206_112314.jpg",
+      "caption": "20251206_112314.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/20251206_123116.jpg",
+      "caption": "20251206_123116.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/20251206_133328.jpg",
+      "caption": "20251206_133328.jpg"
+    }
+  ],
+  "vehicle-inventory-system": [
+    {
+      "type": "image",
+      "url": "/images/Screenshot%202026-09-20%20215622.png",
+      "caption": "Screenshot 2026-09-20 215622.png"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot%202026-09-20%20215645.png",
+      "caption": "Screenshot 2026-09-20 215645.png"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot%202026-09-20%20215724.png",
+      "caption": "Screenshot 2026-09-20 215724.png"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot%202026-09-20%20215740.png",
+      "caption": "Screenshot 2026-09-20 215740.png"
+    }
+  ],
+  "chair-reverse-engineering": [
+    {
+      "type": "image",
+      "url": "/images/IMG-20260920-WA0084.jpg",
+      "caption": "IMG-20260920-WA0084.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/IMG-20260920-WA0085.jpg",
+      "caption": "IMG-20260920-WA0085.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/IMG-20260920-WA0086.jpg",
+      "caption": "IMG-20260920-WA0086.jpg"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot%202026-05-05%20193657.png",
+      "caption": "Screenshot 2026-05-05 193657.png"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot%202026-05-05%20194551.png",
+      "caption": "Screenshot 2026-05-05 194551.png"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot%202026-05-05%20232019.png",
+      "caption": "Screenshot 2026-05-05 232019.png"
+    },
+    {
+      "type": "image",
+      "url": "/images/Screenshot%202026-05-05%20232718.png",
+      "caption": "Screenshot 2026-05-05 232718.png"
+    }
+  ]
+}

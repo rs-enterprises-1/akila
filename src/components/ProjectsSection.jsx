@@ -1,12 +1,11 @@
 import React from 'react';
-import { FolderGit2, ArrowUpRight, Image as ImageIcon, Plus } from 'lucide-react';
+import { FolderGit2, ArrowUpRight, Image as ImageIcon } from 'lucide-react';
 
-export default function ProjectsSection({ projects, onSelectProject, onOpenAddMedia }) {
+export default function ProjectsSection({ projects, onSelectProject }) {
   return (
     <section id="projects" className="section">
       <div className="container">
         
-        {/* Section Header */}
         <div className="section-header">
           <span className="section-tag">
             <FolderGit2 size={14} />
@@ -15,15 +14,14 @@ export default function ProjectsSection({ projects, onSelectProject, onOpenAddMe
           <h2 className="section-title">Featured Mechatronic Projects</h2>
         </div>
 
-        {/* Project Grid */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
           gap: '2rem'
         }}>
           {projects.map((project) => {
-            const hasMedia = project.media && project.media.length > 0;
-            const coverImage = hasMedia ? project.media[0].url : null;
+            const realPhotos = (project.media || []).filter((item) => item.url && !item.url.startsWith('data:'));
+            const coverImage = realPhotos[0]?.url || project.media?.[0]?.url || null;
 
             return (
               <div 
@@ -38,7 +36,6 @@ export default function ProjectsSection({ projects, onSelectProject, onOpenAddMe
                 }}
               >
                 <div>
-                  {/* Card Cover Preview */}
                   <div 
                     onClick={() => onSelectProject(project)}
                     style={{
@@ -51,38 +48,43 @@ export default function ProjectsSection({ projects, onSelectProject, onOpenAddMe
                     }}
                   >
                     {coverImage ? (
-                      <img 
-                        src={coverImage} 
-                        alt={project.title} 
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover'
-                        }}
-                      />
+                      coverImage.match(/\.(mp4|webm|mov)(\?|$)/i) ? (
+                        <video
+                          src={coverImage}
+                          muted
+                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        />
+                      ) : (
+                        <img 
+                          src={coverImage} 
+                          alt={project.title} 
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover'
+                          }}
+                        />
+                      )
                     ) : (
                       <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>
                         <ImageIcon size={40} />
                       </div>
                     )}
 
-                    {/* Status Pill */}
                     <div style={{ position: 'absolute', top: '12px', left: '12px' }}>
                       <span className={`badge ${project.status === 'Completed' ? 'badge-accent' : 'badge'}`}>
                         {project.status}
                       </span>
                     </div>
 
-                    {/* Media Count Pill */}
                     <div style={{ position: 'absolute', bottom: '12px', right: '12px' }}>
                       <span className="badge" style={{ background: '#fff', border: '1px solid #000' }}>
                         <ImageIcon size={13} />
-                        <span>{project.media ? project.media.length : 0} Media Items</span>
+                        <span>{realPhotos.length} Photos</span>
                       </span>
                     </div>
                   </div>
 
-                  {/* Body Content */}
                   <div style={{ padding: '1.75rem' }}>
                     <div style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--text-secondary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.4rem' }}>
                       {project.category}
@@ -119,28 +121,18 @@ export default function ProjectsSection({ projects, onSelectProject, onOpenAddMe
                   </div>
                 </div>
 
-                {/* Footer Controls */}
                 <div style={{
                   padding: '1rem 1.5rem',
                   borderTop: '1px solid var(--border-color)',
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'space-between',
+                  justifyContent: 'flex-end',
                   background: 'var(--bg-surface)'
                 }}>
                   <button
-                    onClick={() => onOpenAddMedia(project)}
-                    className="btn btn-secondary btn-sm"
-                    style={{ gap: '0.35rem' }}
-                  >
-                    <Plus size={14} />
-                    <span>Add Media</span>
-                  </button>
-
-                  <button
                     onClick={() => onSelectProject(project)}
                     className="btn btn-primary btn-sm"
-                    style={{ gap: '0.35rem' }}
+                    style={{ gap: '0.35rem', width: '100%' }}
                   >
                     <span>View Details</span>
                     <ArrowUpRight size={14} />
