@@ -1,49 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { PERSONAL_INFO } from '../data/projectsData';
-import { ArrowRight, Award, Camera, User, Crop } from 'lucide-react';
-import CropModal from './CropModal';
+import { ArrowRight, Award } from 'lucide-react';
+
+const PROFILE_IMAGE = '/images/profile.jpeg';
 
 export default function Hero() {
-  const [profileImage, setProfileImage] = useState(() => {
-    return localStorage.getItem('akila_profile_image') || null;
-  });
-
-  const [isEditingImage, setIsEditingImage] = useState(false);
-  const [imageUrlInput, setImageUrlInput] = useState('');
-  const [cropImageSrc, setCropImageSrc] = useState(null);
-
-  useEffect(() => {
-    if (profileImage) {
-      localStorage.setItem('akila_profile_image', profileImage);
-    }
-  }, [profileImage]);
-
-  const handleFileUpload = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      setCropImageSrc(event.target.result);
-      setIsEditingImage(false);
-    };
-    reader.readAsDataURL(file);
-  };
-
-  const handleUrlSubmit = (e) => {
-    e.preventDefault();
-    if (imageUrlInput.trim()) {
-      setCropImageSrc(imageUrlInput.trim());
-      setImageUrlInput('');
-      setIsEditingImage(false);
-    }
-  };
-
-  const handleCropComplete = (croppedImage) => {
-    setProfileImage(croppedImage);
-    setCropImageSrc(null);
-  };
-
   return (
     <section id="top" style={{ paddingTop: '8.5rem', paddingBottom: '4.5rem', position: 'relative' }}>
       <div className="container">
@@ -132,11 +93,8 @@ export default function Hero() {
                 padding: '8px',
                 border: '2px solid #000',
                 background: '#fff',
-                boxShadow: '6px 6px 0px #000',
-                cursor: 'pointer',
-                transition: 'transform 0.3s ease'
+                boxShadow: '6px 6px 0px #000'
               }}
-              onClick={() => setIsEditingImage(!isEditingImage)}
             >
               <div style={{
                 width: '100%',
@@ -145,109 +103,22 @@ export default function Hero() {
                 overflow: 'hidden',
                 background: 'var(--bg-surface)',
                 border: '1px solid #000',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
                 position: 'relative'
               }}>
-                {profileImage ? (
-                  <img 
-                    src={profileImage} 
-                    alt={PERSONAL_INFO.name} 
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
-                ) : (
-                  <div style={{ textAlign: 'center', color: 'var(--text-primary)', padding: '1rem' }}>
-                    <User size={88} style={{ marginBottom: '0.75rem', color: '#000' }} />
-                    <div style={{ fontSize: '0.8rem', fontFamily: 'var(--font-mono)', fontWeight: 700, textTransform: 'uppercase' }}>
-                      Click to Attach Photo
-                    </div>
-                  </div>
-                )}
-
-                {/* Camera Overlay Badge */}
-                <div style={{
-                  position: 'absolute',
-                  bottom: '14px',
-                  right: '14px',
-                  background: '#000',
-                  color: '#fff',
-                  width: '42px',
-                  height: '42px',
-                  borderRadius: '0px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  border: '2px solid #fff'
-                }}>
-                  <Camera size={20} />
-                </div>
-              </div>
-            </div>
-
-            {/* Image Upload Input Box */}
-            {isEditingImage && (
-              <div className="card" style={{
-                marginTop: '1.25rem',
-                padding: '1.25rem',
-                maxWidth: '350px',
-                width: '100%',
-                background: '#fff'
-              }}>
-                <h4 style={{ fontSize: '0.9rem', fontFamily: 'var(--font-serif)', fontWeight: 800, marginBottom: '0.75rem', textTransform: 'uppercase' }}>
-                  Upload Photo
-                </h4>
-
-                <label style={{ display: 'block', fontSize: '0.775rem', fontFamily: 'var(--font-mono)', marginBottom: '0.4rem' }}>
-                  Option A: Select Image File
-                </label>
-                <input 
-                  type="file" 
-                  accept="image/*"
-                  onChange={handleFileUpload}
+                <img 
+                  src={PROFILE_IMAGE} 
+                  alt={PERSONAL_INFO.name} 
                   style={{
                     width: '100%',
-                    fontSize: '0.8rem',
-                    marginBottom: '0.85rem'
+                    height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center 18%',
+                    transform: 'scale(1.22)',
+                    transformOrigin: 'center 22%'
                   }}
                 />
-
-                <form onSubmit={handleUrlSubmit}>
-                  <label style={{ display: 'block', fontSize: '0.775rem', fontFamily: 'var(--font-mono)', marginBottom: '0.4rem' }}>
-                    Option B: Image Web URL
-                  </label>
-                  <input 
-                    type="text" 
-                    placeholder="https://example.com/photo.jpg"
-                    value={imageUrlInput}
-                    onChange={(e) => setImageUrlInput(e.target.value)}
-                    style={{
-                      width: '100%',
-                      padding: '0.5rem',
-                      background: '#fff',
-                      border: '1px solid #000',
-                      fontSize: '0.8rem',
-                      fontFamily: 'var(--font-mono)',
-                      marginBottom: '0.75rem'
-                    }}
-                  />
-                  <div style={{ display: 'flex', gap: '0.5rem' }}>
-                    <button type="submit" className="btn btn-accent btn-sm" style={{ flex: 1 }}>
-                      Save Photo
-                    </button>
-                    {profileImage && (
-                      <button 
-                        type="button" 
-                        onClick={() => { setProfileImage(null); localStorage.removeItem('akila_profile_image'); setIsEditingImage(false); }}
-                        className="btn btn-secondary btn-sm"
-                      >
-                        Reset
-                      </button>
-                    )}
-                  </div>
-                </form>
               </div>
-            )}
+            </div>
 
           </div>
 
@@ -296,14 +167,6 @@ export default function Hero() {
 
       </div>
 
-      {cropImageSrc && (
-        <CropModal 
-          imageSrc={cropImageSrc}
-          aspectRatio={1}
-          onCropComplete={handleCropComplete}
-          onClose={() => setCropImageSrc(null)}
-        />
-      )}
     </section>
   );
 }

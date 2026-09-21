@@ -9,7 +9,7 @@ export const PERSONAL_INFO = {
   phone: "+94 78 255 3500",
   portfolio: "https://akilasachindra.com",
   github: "https://github.com/akilasachindra",
-  summary: "Third-year Mechatronic Systems Engineering undergraduate with a strong interest in robotics, automation, control systems, embedded systems, and mechanical design. Experienced in integrating mechanical, electrical, and software components through academic and practical engineering projects. Interested in developing intelligent electromechanical systems and applying engineering principles to real-world automation and robotics applications.",
+  summary: "Third-year Mechatronic Systems Engineering undergraduate with an interest in robotics, automation, control systems, embedded systems, and mechanical design. I have worked on academic and personal projects involving mechanical design, electronics, programming, and control. I enjoy building practical systems and learning how different areas of engineering work together.",
   stats: [
     { label: "CGPA", value: "3.73 / 4.00", badge: "Dean's List (Sem 1 & 2)" },
     { label: "A/L Z-Score", value: "2.542", badge: "Island Rank 181 (3As)" },
